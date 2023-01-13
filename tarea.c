@@ -1,5 +1,5 @@
 void mayor(double *matriz, int longitud){
-    int i;
+    int i, index;
     double max=*matriz, temp ;
     for(i=1;i<longitud;i++)
     {
@@ -8,15 +8,16 @@ void mayor(double *matriz, int longitud){
      temp = max;
      max = *matriz;
      *matriz = temp;
+     index=i;
      }
      matriz++;
    }
     printf("\n\nEl menor es: %lf", max);
-    printf("\n\nLa posicion es: %lf", max);
+    printf("\n\nLa posicion es: %d", index);
 }
 
 void menor(double *matriz, int longitud){
-    int i;
+    int i, index;
     double min=*matriz, temp ;
     for(i =1;i<longitud;i++) { 
 
@@ -24,9 +25,10 @@ void menor(double *matriz, int longitud){
         temp = *matriz;
         *matriz = min;
         min = temp;
+        index=i;
     }
      matriz++;
    }
     printf("\n\nEl menor es: %lf", min);
-    printf("\n\nLa posicion es: %lf", min);
+    printf("\n\nLa posicion es: %d", index);
 }
