@@ -1,0 +1,21 @@
+void escribir_numeros_multiplo(char* archivo) {
+    char a[3]={101};
+
+
+    FILE* archivo = fopen("archivo.txt", "r+");
+    if(archivo==NULL)
+    {
+        printf("Error en la lectura del archivo\n");
+    }
+
+    char temp[512];
+    if (fgets(temp, 512, archivo) != NULL){
+    if((strstr(temp, a) != NULL)) {
+        printf("ID ya asignado.");
+        printf("\n");
+    } else{
+        printf("ID no asignado.");
+    }
+}
+    fclose(archivo);
+}
